@@ -12,8 +12,30 @@
     
 }
 
+.statue-bg {
+    background-image: url('/statue.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply border-b
+    
+}
+
+.text-size {
+   @apply text-lg xl:text-xl leading-8;
+}
+
 .blueNoise-bg {
     background-image: url('/blue.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply border-b
+    
+}
+
+.brownNoise-bg {
+    background-image: url('/brownNoise.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,5 +57,5 @@
 }
 
 .large-font {
-    @apply font-bold text-5xl md:text-6xl
+    @apply font-bold text-3xl md:text-5xl lg:text-6xl
 }
