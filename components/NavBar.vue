@@ -1,32 +1,47 @@
 <template>
-  <nav class="hidden pt-14 lg:flex justify-between w-2/3 mx-auto py-4">
-    <img src="/logo.svg" class="my-auto" alt="logo" />
+  <nav
+    class="hidden lg:flex justify-between px-[84px] mx-auto py-4 border-b rounded-b-2xl border-beige-2"
+  >
+    <img src="/assets/logo.svg" class="my-auto w-[173px] h-8" alt="logo" />
 
     <div class="flex gap-2">
-      <div class="flex bg-beige-1 rounded-xl px-8 py-1">
-        <NuxtLink to="/" class="my-auto px-2">Details</NuxtLink>
-        <NuxtLink to="/" class="my-auto px-2">Pricing</NuxtLink>
-        <NuxtLink to="/" class="my-auto px-2">Team</NuxtLink>
+      <div class="flex pr-10 font-medium text-darkBlue">
+        <NuxtLink to="/" class="my-auto px-6">Our Work</NuxtLink>
+        <NuxtLink to="/" class="my-auto px-6">Platform</NuxtLink>
+        <NuxtLink to="/" class="my-auto px-6">About Us</NuxtLink>
       </div>
-      <button class="btn-primary">Get in Touch</button>
+      <button class="btn-primary flex gap-3">
+        Get in Touch
+        <img src="/assets/arrow.svg" class="my-auto" alt="logo" />
+      </button>
     </div>
   </nav>
 
   <nav class="lg:hidden">
-    <div class="flex justify-between p-4">
-      <img src="/logo.svg"  class="my-auto" alt="logo" />
-      <img src="/burger.svg" @click="()=> isOpen = !isOpen" class="my-auto cursor-pointer" alt="logo" />
+    <div class="flex justify-between p-4 border-b border-beige-2">
+      <img src="/assets/logo.svg" class="my-auto w-[173px] h-8" alt="logo" />
+      <img
+        src="/assets/burger.svg"
+        @click="() => (isOpen = !isOpen)"
+        class="my-auto cursor-pointer h-6 w-6"
+        alt="logo"
+      />
     </div>
     <transition name="fade-slide">
-        <div v-if="isOpen" class="bg-beige-1 w-full">
-          <ul class="text-green divide-y-2 divide-beige-2 px-5 text-center text-xl">
-            <li class="py-4 cursor-pointer" @click="isOpen = false">Details</li>
-            <li class="py-4 cursor-pointer" @click="isOpen = false">Pricing</li>
-            <li class="py-4 cursor-pointer" @click="isOpen = false">Team</li>
-            <li class="py-4 font-bold cursor-pointer" @click="isOpen = false">Get in Touch</li>
-          </ul>
+      <div v-if="isOpen" class="w-full">
+        <ul class="text-darkBlue text-center text-xl mt-6 mb-96">
+          <li class="mb-6 cursor-pointer" @click="isOpen = false">Our Work</li>
+          <li class="mb-6 cursor-pointer" @click="isOpen = false">Platform</li>
+          <li class="mb-6 cursor-pointer" @click="isOpen = false">About Us</li>
+        </ul>
+        <div class="mx-4">
+          <button class="btn-primary flex justify-center gap-3 w-full mx-auto">
+          Get in Touch
+          <img src="/assets/arrow.svg" class="my-auto" alt="logo" />
+        </button>
         </div>
-      </transition>
+      </div>
+    </transition>
   </nav>
 </template>
 
@@ -35,16 +50,18 @@ const isOpen = ref(false);
 </script>
 
 <style scoped>
-.fade-slide-enter-active, .fade-slide-leave-active {
+.fade-slide-enter-active,
+.fade-slide-leave-active {
   transition: all 0.3s ease;
 }
-.fade-slide-enter-from, .fade-slide-leave-to {
+.fade-slide-enter-from,
+.fade-slide-leave-to {
   opacity: 0;
   transform: translateY(-10px);
 }
-.fade-slide-enter-to, .fade-slide-leave-from {
+.fade-slide-enter-to,
+.fade-slide-leave-from {
   opacity: 1;
   transform: translateY(0);
 }
 </style>
-
