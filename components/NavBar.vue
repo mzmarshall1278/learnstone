@@ -2,7 +2,7 @@
   <nav
     class="hidden lg:flex justify-between px-[84px] mx-auto py-4 border-b rounded-b-2xl border-beige-2"
   >
-    <img src="/assets/logo.svg" class="my-auto w-[173px] h-8" alt="logo" />
+    <img src="/assets/Logo.svg" class="my-auto w-[173px] h-8" alt="logo" />
 
     <div class="flex gap-2">
       <div class="flex pr-10 font-medium text-darkBlue">
@@ -19,7 +19,7 @@
 
   <nav class="lg:hidden">
     <div class="flex justify-between p-4 border-b border-beige-2">
-      <img src="/assets/logo.svg" class="my-auto w-[173px] h-8" alt="logo" />
+      <img src="/assets/Logo.svg" class="my-auto w-[173px] h-8" alt="logo" />
       <img
         src="/assets/burger.svg"
         @click="() => (isOpen = !isOpen)"
