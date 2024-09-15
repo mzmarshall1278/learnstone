@@ -1,0 +1,52 @@
+/* assets/css/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.statue-bg {
+    background-image: url('/statue.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply border-b
+    
+}
+
+.text-size {
+   @apply text-lg xl:text-xl leading-8;
+}
+
+.blueNoise-bg {
+    background-image: url('/blue.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply border-b
+    
+}
+
+.brownNoise-bg {
+    background-image: url('/brownNoise.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply border-b
+    
+}
+
+.shape-bg {
+    background-image: url('/shape-dots.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @apply border-b
+    
+}
+
+.btn-primary {
+   @apply bg-orange rounded-lg px-6 py-3 text-white font-normal text-base my-auto;
+}
+
+.large-font {
+    @apply font-bold text-3xl md:text-5xl lg:text-6xl
+}
