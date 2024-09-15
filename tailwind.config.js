@@ -22,7 +22,12 @@ module.exports = {
         "beige-1": '#F4EED3',
         "beige-2": "#DBCCB1",
         "orange": "#FF5F45",
-      }
+        "darkBlue": "#00140F",
+        "light-gray": "#B4B8B7"
+      },
+      fontFamily: {
+        headlines: ['Headlines', 'sans-serif'], // Add the Google Font
+      },
     },
   },
   plugins: [],
