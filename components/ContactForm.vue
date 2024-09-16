@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <form @submit.prevent="submitForm" class="">
     <h4 class="text-xl font-semibold mb-4">Send Us a Message</h4>
     <div class="">
       <label class="block text-lg font-medium mb-4">Your Business Mail</label>
@@ -7,7 +7,7 @@
         placeholder="Enter Your Business Mail"
         type="text"
         v-model="email"
-        class="mb-4 w-[343px] [671px] px-4 py-3 border border-light-gray rounded-xl"
+        class="mb-4 w-[343px] lg:w-[671px] px-4 py-3 border border-light-gray rounded-xl"
       />
     </div>
 
@@ -18,7 +18,7 @@
         v-model="subject"
         type="text"
         maxLength="100"
-        class="mb-4 w-[343px] [671px] px-4 py-3 border border-light-gray rounded-xl"
+        class="mb-4 w-[343px] lg:w-[671px] px-4 py-3 border border-light-gray rounded-xl"
       />
       <p class="ml-auto text-xs text-right mr-4">{{ subject.length }}/100</p>
     </div>
@@ -29,7 +29,7 @@
         placeholder="Message"
         v-model="message"
         maxLength="500"
-        class="mb-4 w-[343px] [671px] px-4 py-3 border border-light-gray rounded-xl"
+        class="mb-4 w-[343px] lg:w-[671px] px-4 py-3 border border-light-gray rounded-xl"
       />
       <p class="ml-auto text-xs text-right mr-4 mb-6">
         {{ message.length }}/500
@@ -40,13 +40,25 @@
       Send Message
       <img src="/assets/arrow.svg" class="my-auto" alt="logo" />
     </button>
-  </div>
+  </form>
 </template>
 
 <script setup lang="ts">
+import axios from 'axios';
+
 const email = ref("")
 const subject = ref("")
 const message = ref("")
+
+const submitForm = async () => {
+  console.log('object');
+      try {
+        await axios.post('/api/contact', {email: email.value, subject: subject.value, message: message.value});
+        alert('Message sent successfully!');
+      } catch (error) {
+        console.error('Error sending message:', error);
+      }
+    };
 </script>
 
 <style scoped></style>
