@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="mt-24">
+      <div class="mt-24" id="work">
         <div class="w-[343px] lg:w-[1166px] mx-auto mt-9">
           <div class="">
             <h5 class="text-xl font-semibold text-orange mb-2">Our Work</h5>
@@ -137,9 +137,9 @@
           </div>
       </div>
 
-      <Toggles/>
+      <Toggles id="platform"/>
 
-      <div class="mt-24">
+      <div class="mt-24" id="about">
         <div class="w-[343px] lg:w-[1166px] mx-auto mt-9">
           <div class="">
             <h5 class="text-xl font-semibold text-orange mb-2">About Us</h5>
