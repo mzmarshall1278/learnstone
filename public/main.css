@@ -44,9 +44,13 @@
 }
 
 .btn-primary {
-   @apply bg-orange rounded-lg px-6 py-3 text-white font-normal text-base my-auto;
+   @apply bg-orange rounded-lg px-6 py-3 text-white font-normal text-base my-auto ;
 }
 
 .large-font {
     @apply font-bold text-3xl md:text-5xl lg:text-6xl
 }
+
+html {
+    scroll-behavior: smooth;
+  }
