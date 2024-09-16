@@ -6,9 +6,9 @@
 
     <div class="flex gap-2">
       <div class="flex pr-10 font-medium text-darkBlue">
-        <NuxtLink to="/" class="my-auto px-6">Our Work</NuxtLink>
-        <NuxtLink to="/" class="my-auto px-6">Platform</NuxtLink>
-        <NuxtLink to="/" class="my-auto px-6">About Us</NuxtLink>
+        <NuxtLink to="/#work" class="my-auto px-6">Our Work</NuxtLink>
+        <NuxtLink to="/#platform" class="my-auto px-6">Platform</NuxtLink>
+        <NuxtLink to="/#about" class="my-auto px-6">About Us</NuxtLink>
       </div>
       <button class="btn-primary flex gap-3">
         Get in Touch
@@ -30,15 +30,20 @@
     <transition name="fade-slide">
       <div v-if="isOpen" class="w-full">
         <ul class="text-darkBlue text-center text-xl mt-6 mb-96">
-          <li class="mb-6 cursor-pointer" @click="isOpen = false">Our Work</li>
-          <li class="mb-6 cursor-pointer" @click="isOpen = false">Platform</li>
-          <li class="mb-6 cursor-pointer" @click="isOpen = false">About Us</li>
+          <NuxtLink @click="isOpen = false" to="/#work" class="mb-6 cursor-pointer block"
+            >Our Work</NuxtLink
+          >
+          <NuxtLink @click="isOpen = false" to="/#platform" class="mb-6 cursor-pointer block"
+            >Platform</NuxtLink>
+          <NuxtLink @click="isOpen = false" to="/#about" class="mb-6 cursor-pointer block"
+            >About Us</NuxtLink
+          >
         </ul>
         <div class="mx-4">
           <button class="btn-primary flex justify-center gap-3 w-full mx-auto">
-          Get in Touch
-          <img src="/assets/arrow.svg" class="my-auto" alt="logo" />
-        </button>
+            Get in Touch
+            <img src="/assets/arrow.svg" class="my-auto" alt="logo" />
+          </button>
         </div>
       </div>
     </transition>
